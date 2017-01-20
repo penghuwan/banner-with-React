@@ -1,0 +1,56 @@
+*{margin:0;padding:0;}
+.sections{
+  width: 200px;
+  height: 200px;
+  border: 1px solid black;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  margin-left: -100px;
+  margin-top:-100px;
+  overflow: hidden;
+}
+.banner-container{
+  width: 400%;
+  height: 100%;
+  position: absolute;
+  padding: 0px;
+  margin: 0px;
+  font-size: 0px;
+  transition: 0.5s left;
+}
+.banner-container li{
+  width: 200px;
+  height: 200px;
+  display: inline-block;
+  list-style: none;
+}
+.banner-controller{
+  width:80px;
+  height: 30px;
+  position:absolute;
+  bottom:0px;
+  left: 50%;
+  margin-left:-40px;
+}
+/*
+ 在一个块级导航栏div中分出n个均匀分布等间隔的块
+ div{margin-left: calc((100% - (m% * n)) / (n-1)));}
+div:nth-child(1) {margin-left:0px;}
+*/
+.banner-controller div{
+  width:20%;
+  height: 100%;
+  float:left;
+  margin-left: calc((100% - (20% * 4)) / 3);
+}
+.banner-controller div:nth-child(1){
+  margin-left:0px;
+}
+.banner-controller p{
+  text-align: center;
+  line-height: 30px;
+  background: grey;
+  opacity: 0.5;
+  font-family: "微软雅黑";
+}
